@@ -6,7 +6,7 @@ fn main() {
     let vec = line
         .trim()
         .split(' ')
-        .flat_map(|x| x.parse::<i32>())
+        .flat_map(&str::parse::<i32>)
         .collect::<Vec<_>>();
 
     println!("{}", vec[0] - vec[1]);
